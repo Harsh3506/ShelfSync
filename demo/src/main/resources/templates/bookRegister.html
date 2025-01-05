@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeLeaf.com">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Hello, world!</title>
+    <link rel="stylesheet" href= "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" style="font-size: 35px; font-family: Georgia, 'Times New Roman', Times, serif;" 
+        href="#">Book Detailer</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item me-4">
+              <a class="nav-link active text-white" style="font-size: 30px;"
+               aria-current="page" href="/"><i class="bi bi-house"></i>Home</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link text-white"style="font-size: 30px;" href="Availablebooks">
+                <i class="bi bi-search"></i>Available books</a>
+            </li>
+            <li class="nav-item me-4">
+              <a class="nav-link text-white"style="font-size: 30px;" href="my_books">
+                <i class="bi bi-bag-check"></i>my books</a>
+            </li>
+          </ul>
+         <div>
+          <a class="nav-link text-white"style="font-size: 30px;" href="newbook">
+            <i class="bi bi-plus-circle"></i>new register</a>
+         </div>
+        </div>
+      </div>
+    </nav>
+
+      <section>
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-md-16 offset-md-13">
+                    <div class="card">
+                        <div class="card-header text-center fs-4">Add Informations✨</div>
+    
+                        <div class="card-body">
+                            <form th:action="@{/save}" method="post">
+                                <div class="mb-3">
+                                    <label>Enter Book Name:</label>
+                                    <input type="text" name="name" class="form-control" required>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label>Enter Price:</label>
+                                    <input type="number" name="price" class="form-control" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label>Enter Author Name:</label>
+                                    <input type="text" name="author" class="form-control" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary col-md-12">Add Confirm</button>
+                            
+                            </form>
+                        </div>
+                            
+                      </div>
+                    </div>
+                </div>
+            </div>
+       
+    </section>
+</html>
