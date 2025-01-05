@@ -1,0 +1,1 @@
+ShelfSync is a web application for managing book information, built with Spring MVC, Spring Data JPA, and MySQL. It features a responsive front-end using Thymeleaf, HTML, CSS, and Bootstrap, allowing users to easily track and manage their book collections
